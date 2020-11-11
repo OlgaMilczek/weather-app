@@ -3,6 +3,8 @@
 This project was created as a part of Odin Project Course. \
 With this project i practice fetching data, async function and working with APIs. 
 
+Online demo: http://OlgaNowakowska.github.io/weather-app
+
 ## Available Scripts
 
 In the project directory, you can run:
