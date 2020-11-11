@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Simple Weather App 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created as a part of Odin Project Course. \
+With this project i practice fetching data, async function and working with APIs. 
 
 ## Available Scripts
 
