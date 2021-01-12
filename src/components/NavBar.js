@@ -30,15 +30,15 @@ const NavBar = (props) => {
         <nav>
             <div className='navbar'>
                 <div className='logo'>
-                    <h3>WEATHER APP</h3>
+                    <h1>WEATHER APP</h1>
                 </div>
-                <div>
+                <div className='search'>
                     <form onSubmit={onClick}>
                         <input type='text' placeholder='Enter a city name' className='city-search' onChange={handleChange}/>
                         <button className='search-btn'><FontAwesomeIcon icon={faSearch} /></button>
                     </form>
                 </div>
-                <div>
+                <div className='temperature'>
                     <label className="switch">
                         <input type="checkbox" id="togBtn" onChange ={handleChange}/>
                         <div className="slider round">
