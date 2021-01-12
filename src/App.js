@@ -10,7 +10,7 @@ function App() {
     const [search, setSearch] = useState('');
     const [tempUnit, setTempUnit] = useState('C');
     const [weather, setWeather] = useState({});
-    const [background, setBackground] = useState({ backgroundImage: `url(${backgrounds['default']})`});
+    const [background, setBackground] = useState({ backgroundImage: `${backgrounds['default']}`});
 
     useEffect(() => {  
         if (search !== '') {
@@ -21,12 +21,12 @@ function App() {
     useEffect(() => {
         let newImage;
         if (weather.weather === undefined) {
-            newImage = `url(${backgrounds['default']})`;
+            newImage = `${backgrounds['default']}`;
         } else {
             if (backgrounds[weather.weather[0]['main']] === undefined) {
-                newImage = `url(${backgrounds['Mist']})`;
+                newImage = `${backgrounds['Mist']}`;
             } else {
-                newImage = `url(${backgrounds[weather.weather[0]['main']]})`;
+                newImage = `${backgrounds[weather.weather[0]['main']]}`;
             }
         }
         newBackground(newImage);

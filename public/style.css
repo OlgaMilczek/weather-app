@@ -1,34 +1,57 @@
+:root {
+  --background-default: url('https://images.photowall.com/products/58341/foggy-forest-4.jpg?h=699&q=85');
+  --background-clear: url('https://www.trendlewoodchurch.org.uk/wp-content/uploads/2013/03/clear-sky-nature-hd-wallpaper-1920x1080-3829.jpg');
+  --background-clouds: url('https://www.publicdomainpictures.net/pictures/110000/velka/scattered-clouds.jpg');
+  --background-drizzle: url('https://www.gazette-news.co.uk/resources/images/10469131/');
+  --background-rain: url('https://4kwallpaper.wiki/wp-content/uploads/2019/07/241918.jpg');
+  --background-thunderstorm: url('https://www.stormgeo.com/assets/ArticleImages/thunderstorm-flipped__ScaleMaxWidthWzEyMDBd.jpg');
+  --background-mist: url('https://images.photowall.com/products/51422/norwegian-mist.jpg?h=699&q=85');
+  --background-snow: url('https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Field-with-snow-champ-enneige.jpg/1200px-Field-with-snow-champ-enneige.jpg');
+}
+
+html {
+  font-size: 62.5%;
+}
 body {
     font-family: 'Nunito', sans-serif;
     box-sizing: border-box;
     width: 100vw;
-    height: 100vh;
-
-}
+    min-height: 100vh;
+  }
 
  /*Nav start*/
 
 nav {
     background-color: rgba(29, 29, 29, 0.8);
-    max-height: 7vh;
+    height: 100%;
 }
 
 .navbar {
     width: 70vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: auto;
-    padding: 15px 0;
+    padding: 1.5rem 0;
 }
 
 .city-search {
-    width: 20vw;
-    height: 34px;
-    border-radius: 34px;
-    padding-left: 20px;
-    padding-right: 50px;
+    width: 30rem;
+    border-radius: 3.4rem;
+    padding: .6rem;
+    padding-left: 2rem;
+    padding-right: 5rem;
     border: 0;
     background-color: white;
+    opacity: 0.8;
+    transition: all .2s;
+    font-size: 1.6rem;
+}
+
+.city-search:active,
+.city-search:focus {
+  outline: none;
+  opacity: 1;
 }
 
 form {
@@ -38,22 +61,29 @@ form {
 .search-btn {
     position: absolute;
     right: 0;
-    height: 36px;
-    border-radius: 36px;
+    height: 3.4rem;
+    border-radius: 3.4rem;
     border: 0;
     background: none;
     opacity: 0.5;
+    font-size: 1.5rem;
 }
 
 .search-btn:hover {
     opacity: 0.8;
 }
 
+.search-btn:active, 
+.search-btn:focus {
+  outline: none;
+}
 
-h3 {
+
+
+h1 {
     color: white;
     margin: 0;
-    font-size: 25px;
+    font-size: 2.5rem;
     font-weight: lighter;
 }
 
@@ -62,8 +92,8 @@ h3 {
 .switch {
     position: relative;
     display: inline-block;
-    width: 70px;
-    height: 34px;
+    width: 7rem;
+    height: 3.4rem;
   }
   
   .switch input {display:none;}
@@ -83,10 +113,10 @@ h3 {
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 2.6rem;
+    width: 2.6rem;
+    left: .4rem;
+    bottom: .4rem;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -101,9 +131,9 @@ h3 {
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(35px);
-    -ms-transform: translateX(35px);
-    transform: translateX(35px);
+    -webkit-transform: translateX(3.5rem);
+    -ms-transform: translateX(3.5rem);
+    transform: translateX(3.5rem);
   }
 
   .on
@@ -116,7 +146,7 @@ h3 {
     color: white;
     position: absolute;
     transform: translate(-50%,-50%);
-    font-size: 12px;
+    font-size: 1.2rem;
     top: 50%;
     font-weight: bold;
   }
@@ -130,7 +160,7 @@ h3 {
   }
   
   .slider.round {
-    border-radius: 34px;
+    border-radius: 3.3rem;
   }
   
   .slider.round:before {
@@ -143,6 +173,7 @@ h3 {
     background-repeat: no-repeat;
     min-height: 100vh;
     background-size: cover;
+    transition: all .5s;
 }
 
 .weather-container {
@@ -168,18 +199,18 @@ h3 {
 
 .weather-icon {
   margin: auto;
-  margin-bottom: -20px;
+  margin-bottom: -2rem;
 }
 
 p {
   color: white;
-  margin-top: 5px;
+  margin-top: .5rem;
   margin-bottom: 0px;
-  font-size: 1.2em;
+  font-size: 1.8rem;
 }
 
 .forcast-container > h2 {
-  font-size: 2em;
+  font-size: 2.5rem;
   margin: 0;
 }
 
@@ -197,7 +228,7 @@ p {
 .today-low-high {
   width: 80vw;
   position: absolute;
-  bottom: 10px;
+  bottom: 1rem;
   left: 10vw;
 }
 
@@ -209,7 +240,7 @@ p {
 }
 
 .today-high, .today-low {
-  margin: 20px auto;
+  margin: 2rem auto;
 }
 
 .border {
@@ -230,12 +261,13 @@ p {
     color: white;
     justify-content: center;
     background-color:rgba(29, 29, 29, 0.5);
+    font-size: 1.4rem;
 }
 
 .github-logo {
-    width: 20px;
-    height: 20px;
-    margin: auto 10px;
+    width: 2rem;
+    height: 2rem;
+    margin: auto 1rem;
     color: white;
 }
 
@@ -244,3 +276,35 @@ p {
 }
 
 /*Footer end*/
+
+/*Media queries*/
+
+@media only screen and (max-width: 1200px) {
+  .navbar {
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+
+@media only screen and (max-width: 550px) {
+  .navbar {
+   flex-wrap: wrap;
+   justify-content: center;
+  }
+  .temperature {
+    margin-left: auto;
+  }
+  .search {
+    order: 1;
+    margin-top: 1.4rem
+  }
+  .today-low-high  {
+    bottom: 5rem;
+  }
+}
